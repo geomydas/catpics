@@ -2,13 +2,12 @@ const fetch = require("node-fetch");
 
 exports.handler = async (event, context) => {
   const API_KEY = process.env.CAT_API_KEY;
-  const headers = new Headers({
-    "x-api-key": API_KEY,
-    "Content-Type": "application/json",
-  });
   const requestOptions = {
     method: "GET",
-    headers: headers,
+    headers: {
+      "x-api-key": API_KEY,
+      "Content-Type":"application/json"
+    },
     redirect: "follow",
   };
   try {
