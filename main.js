@@ -4,10 +4,16 @@
       const request = await fetch("/.netlify/functions/getCat");
       const response = await request.json();
 
-      document.getElementById("cats-container").innerHTML =
-        createCatElements(response).join("");
+      console.log("Response from function:", response); // Log the response to check its format
+
+      if (Array.isArray(response)) {
+        document.getElementById("cats-container").innerHTML =
+          createCatElements(response).join("");
+      } else {
+        console.error("Response is not an array:", response);
+      }
     } catch (error) {
-      console.log(error.message);
+      console.log("Error fetching data:", error.message);
     }
   };
 
@@ -25,7 +31,7 @@
               <p class="catbreed">${catName}</p>
               <p class="catdescription">${catDescription}</p>
               <p class="catlocation">${catLocation}</p>
-            </di>
+            </div>
         </li>
       `;
     });
