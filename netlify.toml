@@ -1,0 +1,6 @@
+[build]
+  functions = "functions"
+  publish = "path/to/public"
+
+[functions]
+  directory = "functions"
