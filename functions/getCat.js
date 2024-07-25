@@ -1,7 +1,9 @@
-const fetch = require("node-fetch");
+// functions/getCat.js
 
 exports.handler = async (event, context) => {
+  const fetch = (await import("node-fetch")).default; // Dynamically import node-fetch
   const API_KEY = process.env.CAT_API_KEY;
+
   try {
     const response = await fetch(
       "https://api.thecatapi.com/v1/images/search?limit=100&has_breeds=true",
