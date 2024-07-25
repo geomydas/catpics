@@ -1,7 +1,7 @@
 (function () {
   const requestCats = async () => {
     try {
-      const request = await fetch("/.netlify/functions/getCats");
+      const request = await fetch("/.netlify/functions/getCat");
       const response = await request.json();
 
       document.getElementById("cats-container").innerHTML =
