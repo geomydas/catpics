@@ -30,9 +30,8 @@
             <div class="cat-info">
               <p class="catbreed">${catName}</p>
               <details class="catdescription-details">
-                <summary class="catdescription-summary">
+                <summary class="catdescription-summary">Cat Description</summary>
                   <p class="catdescription">${catDescription}</p>
-                </summary>
               </details>
               <p class="catlocation">${catLocation}</p>
             </div>
