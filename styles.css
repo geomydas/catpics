@@ -76,6 +76,43 @@ h1 {
   font-weight: 500;
   font-size: 2rem;
 }
+.catdescription-details {
+  cursor:pointer;
+  color: var(--White);
+  font-size:1rem;
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+}
+.catdescription-summary {
+  padding:0.5rem;
+  margin-bottom:1rem;
+  width:max-content;
+  display:flex;
+  align-items:center;
+  border-radius:5px;
+  background-color:var(--Dark-grayish-blue);
+  position:relative;
+}
+.catdescription-summary::-webkit-details-marker,
+.catdescription-summary::marker {
+  display:none;
+  content:"";
+}
+
+.catdescription-summary::after {
+  content:"\25B2";
+  margin-left:0.8rem;
+  padding:0rem 0.3rem 0.2rem 0.3rem;
+  color:var(--Dark-grayish-blue);
+  text-align:center;
+  border-radius:50%;
+  background-color:var(--Off-white);
+}
+.catdescription-details[open] > .catdescription-summary::after {
+  content:"\25BC";
+  padding:0.1rem 0.3rem 0rem 0.3rem;
+}
 .catdescription {
   color: var(--Grey);
   font-size: 1.2rem;
