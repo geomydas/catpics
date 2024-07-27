@@ -29,7 +29,10 @@
             <img src=${catPicUrl} alt="" class="catimage" />
             <div class="cat-info">
               <p class="catbreed">${catName}</p>
-              <p class="catdescription">${catDescription}</p>
+              <details class="catdescription-details">
+                <summary class="catdescription-summary">Cat Description</summary>
+                  <p class="catdescription">${catDescription}</p>
+              </details>
               <p class="catlocation">${catLocation}</p>
             </div>
         </li>
